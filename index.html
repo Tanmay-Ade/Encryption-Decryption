@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encryprion-Decryption</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="heading">
+      <h1>Encryption</h1>
+      <h1 id="arrow">→</h1>
+      <h1>Decryption</h1>
+    </div>
+
+    <div id="button">
+      <button id="encryptBtn" class="active">Encryption</button>
+      <button id="decryptBtn">Decryption</button>
+    </div>
+
+    <form id="encrypt">
+      <label for="encryptText">1. Type a message</label>
+      <textarea name="encryptText" required id="encryptText" placeholder="write something here..." rows="3" autocomplete="false"></textarea>
+      <br>
+      <br>
+      <label for="enc-password">2. Set a Password</label>
+      <input type="password" required name="enc-password" id="enc-password" placeholder="E.g. 1234" autocomplete="false">
+      <br>
+      <br>
+      <label for="submit">3. Encrypt message</label>
+      <input type="submit" value="Encrypt Text" id="encBtn">
+      <br>
+      <br>
+      <div id="enc-output">
+        <label for="encryptedText">4. Your encrypted message</label>
+        <textarea name="encryptedText" id="encryptedText"></textarea>
+      </div>
+    </form>
+
+    <form id="decrypt" class="hide">
+      <label for="decryptText">1. Paste encrypted Text</label>
+      <textarea required name="decryptText" id="decryptText" placeholder="Paste encrypted Text here..." rows="3" autocomplete="false"></textarea>
+      <br>
+      <br>
+      <label for="dec-password">2. Type the password</label>
+      <input type="password" required name="dec-password" id="dec-password" placeholder="E.g. 1234" autocomplete="false">
+      <br>
+      <br>
+      <label for="submit">3. Decrypt message</label>
+      <input type="submit" value="Decrypt Text" id="decBtn">
+      <br>
+      <br>
+      <div id="dec-output">
+        <label for="decryptedText">4. Your decrypted message</label>
+        <textarea name="decryptedText" id="decryptedText" class="error" readonly></textarea>
+      </div>
+    </form>
+    <script src="script.js"></script>
+  </body>
+</html>

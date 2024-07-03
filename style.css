@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+}
+
+#heading {
+  display: flex;
+  justify-content: center;
+  padding: 40px 0;
+  gap: 20px;
+}
+
+#button {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  background-color: #1e1e1e;
+  width: fit-content;
+  padding: 10px 30px;
+  margin: 0 auto 20px;
+  border-radius: 10px;
+}
+
+#button > .active {
+  background-color: #2e2e2e;
+}
+
+#button > button {
+  background-color: #1e1e1e;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#button > button:hover {
+  background-color: #2e2e2e;
+}
+
+#heading>#arrow {
+  transform: rotate(0deg);
+  transition: all ease-in 0.3s;
+}
+
+#encrypt {
+  width: 45%;
+  margin: auto;
+}
+
+#encrypt>label, input[type='submit'], #enc-password, #dec-password, textarea {
+  width: 100%;
+}
+
+#decrypt {
+  width: 45%;
+  margin: auto;
+  display: none;
+}
+
+#decrypt>label, input[type='submit'], #enc-password, #dec-password, textarea {
+  width: 100%;
+}
+
+@media screen and (min-width: 200px) and (max-width: 480px) {
+  #button {
+    padding: 10px;
+  }
+  #heading {
+    font-size: 12px;
+  }
+  #encrypt {
+    width: 90%;
+  }
+  #decrypt {
+    width: 90%;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  #encrypt {
+    width: 70%;
+  }
+
+  #decrypt {
+    width: 70%;
+  }
+}
+
+textarea, input {
+  background-color: #1e1e1e;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+input[type="submit"] {
+  cursor: pointer;
+}
+
+#enc-output, #dec-output {
+  display: none;
+}
+
